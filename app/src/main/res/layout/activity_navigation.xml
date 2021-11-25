@@ -12,9 +12,13 @@
         android:layout_height="wrap_content"
         android:background="@color/menu_dark_orange_color"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:logo="@drawable/video_app_logo_tiny"
+        app:menu="@menu/toolbar_menu"
         app:title="@string/app_name"
-        app:titleMarginStart="@dimen/title_margin_start_23"/>
+        app:titleMarginStart="@dimen/title_margin_start_23" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
