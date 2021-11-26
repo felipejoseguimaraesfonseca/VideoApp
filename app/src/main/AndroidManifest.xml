@@ -33,7 +33,8 @@
             android:exported="false" />
         <activity
             android:name=".view.activities.SignInOrSignUpActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="SignInOrSignUp"/>
         <activity
             android:name=".view.activities.SplashActivity"
             android:exported="true">
