@@ -29,4 +29,12 @@
     <string name="password">Password</string>
     <string name="confirm_password">Confirm password</string>
 
+    <string name="account_saved_successfully">Account saved successfully</string>
+    <string name="account_updated_successfully">Account updated successfully</string>
+    <string name="account_deleted_successfully">Account deleted successfully</string>
+
+    <string name="account_saved_failure">Fail to save account</string>
+    <string name="account_updated_failure">Fail to update account</string>
+    <string name="account_deleted_failure">Fail to delete account</string>
+
 </resources>
