@@ -42,7 +42,7 @@
         tools:ignore="Autofill,TextFields" />
 
     <Button
-        android:id="@+id/sign_in_blue_button"
+        android:id="@+id/sign_in_dark_orange_button"
         android:layout_width="@dimen/button_width_size"
         android:layout_height="@dimen/button_height_size"
         android:background="@drawable/button_rounded_shape_dark_orange_color"

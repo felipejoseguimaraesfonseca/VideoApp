@@ -23,7 +23,7 @@
     <string name="sign_up_with_google">Sign Up with google</string>
 
     <string name="first_name">First name</string>
-    <string name="second_name">Second name</string>
+    <string name="last_name">Last name</string>
     <string name="email">Email</string>
     <string name="confirm_email">Confirm email</string>
     <string name="password">Password</string>
@@ -40,5 +40,19 @@
     <string name="account_deleted_failure">Fail to delete account</string>
 
     <string name="no_internet_connection">No internet connection</string>
+
+    <string name="fill_all_the_fields">Fill all the fields</string>
+
+    <string name="are_not_the_same">
+        Email and Confirm email are not the same and Password and Confirm password are not the same.
+    </string>
+
+    <string name="email_and_confirm_email_are_not_the_same">
+        Email and Confirm email are not the same.
+    </string>
+
+    <string name="password_and_confirm_password_are_not_the_same">
+        Password and Confirm password are not the same.
+    </string>
 
 </resources>
