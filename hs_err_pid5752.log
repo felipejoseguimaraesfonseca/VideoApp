@@ -1,0 +1,195 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 67108864 bytes for Failed to commit area from 0x00000000c0800000 to 0x00000000c4800000 of length 67108864.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3301), pid=5752, tid=2848
+#
+# JRE version:  (11.0.11+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.11+9-b60-7590822, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @C:\Users\felip\AndroidStudioProjects\VideoApp\app\build\20211203_13955503135343501360.compiler.options
+
+Host: Celeron(R) Dual-Core CPU       T3500  @ 2.10GHz, 2 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1348)
+Time: Fri Dec  3 09:51:08 2021 E. South America Standard Time elapsed time: 0.137586 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000018566b0f000):  JavaThread "Unknown thread" [_thread_in_vm, id=2848, stack(0x0000004ad7200000,0x0000004ad7300000)]
+
+Stack: [0x0000004ad7200000,0x0000004ad7300000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5f214a]
+V  [jvm.dll+0x726fb5]
+V  [jvm.dll+0x7285cd]
+V  [jvm.dll+0x728c83]
+V  [jvm.dll+0x243278]
+V  [jvm.dll+0x5ef544]
+V  [jvm.dll+0x5e4495]
+V  [jvm.dll+0x2fec5b]
+V  [jvm.dll+0x2febca]
+V  [jvm.dll+0x2feaa2]
+V  [jvm.dll+0x303986]
+V  [jvm.dll+0x34c3a3]
+V  [jvm.dll+0x34caa6]
+V  [jvm.dll+0x34c4a3]
+V  [jvm.dll+0x2d9688]
+V  [jvm.dll+0x2da837]
+V  [jvm.dll+0x705ba7]
+V  [jvm.dll+0x70739c]
+V  [jvm.dll+0x3598f9]
+V  [jvm.dll+0x6e931e]
+V  [jvm.dll+0x3c1c43]
+V  [jvm.dll+0x3c3e81]
+C  [jli.dll+0x5373]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000185649fff30, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000018566b26800 GCTaskThread "GC Thread#0" [stack: 0x0000004ad7300000,0x0000004ad7400000] [id=4344]
+  0x0000018566b41800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000004ad7400000,0x0000004ad7500000] [id=6220]
+  0x0000018566b42800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000004ad7500000,0x0000004ad7600000] [id=7876]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff9b7329c47]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000018566b0c280] Heap_lock - owner thread: 0x0000018566b0f000
+
+Heap address: 0x00000000c0800000, size: 1016 MB, Compressed Oops mode: Non-zero based: 0x00000000c0800000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.053 Loaded shared library C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff606ef0000 - 0x00007ff606efa000 	C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin\java.exe
+0x00007ff9eee70000 - 0x00007ff9ef065000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff9e0a50000 - 0x00007ff9e0a66000 	C:\Program Files\Avast Software\Avast\aswhook.dll
+0x00007ff9ecec0000 - 0x00007ff9ecf7e000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff9ec870000 - 0x00007ff9ecb38000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff9ec6d0000 - 0x00007ff9ec7d0000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff9e7480000 - 0x00007ff9e7499000 	C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin\jli.dll
+0x00007ff9eec80000 - 0x00007ff9eee21000 	C:\Windows\System32\USER32.dll
+0x00007ff9ece90000 - 0x00007ff9eceb2000 	C:\Windows\System32\win32u.dll
+0x00007ff9ee350000 - 0x00007ff9ee37b000 	C:\Windows\System32\GDI32.dll
+0x00007ff9ecd00000 - 0x00007ff9ece0b000 	C:\Windows\System32\gdi32full.dll
+0x00007ff9ec7d0000 - 0x00007ff9ec86d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff9e74a0000 - 0x00007ff9e74b7000 	C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin\VCRUNTIME140.dll
+0x00007ff9e0400000 - 0x00007ff9e069a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff9ed270000 - 0x00007ff9ed30e000 	C:\Windows\System32\msvcrt.dll
+0x00007ff9ed690000 - 0x00007ff9ed6c0000 	C:\Windows\System32\IMM32.DLL
+0x00007ff9d60a0000 - 0x00007ff9d613d000 	C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin\msvcp140.dll
+0x00007ff9b7040000 - 0x00007ff9b7b15000 	C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin\server\jvm.dll
+0x00007ff9ee600000 - 0x00007ff9ee6ac000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff9ed6c0000 - 0x00007ff9ed75b000 	C:\Windows\System32\sechost.dll
+0x00007ff9edec0000 - 0x00007ff9edfea000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff9ee740000 - 0x00007ff9ee748000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff9ddaf0000 - 0x00007ff9ddaf9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff9ee440000 - 0x00007ff9ee4ab000 	C:\Windows\System32\WS2_32.dll
+0x00007ff9d4c70000 - 0x00007ff9d4c97000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff9e0a70000 - 0x00007ff9e0a7a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff9ea3b0000 - 0x00007ff9ea3c2000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff9cd5a0000 - 0x00007ff9cd5b1000 	C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin\verify.dll
+0x00007ff9e0860000 - 0x00007ff9e0a44000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff9e0830000 - 0x00007ff9e085c000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff9ec590000 - 0x00007ff9ec613000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff9ccc20000 - 0x00007ff9ccc49000 	C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin\java.dll
+0x00007ff9e1620000 - 0x00007ff9e162b000 	C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin\jimage.dll
+0x00007ff9ca380000 - 0x00007ff9ca398000 	C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin;C:\Windows\SYSTEM32;C:\Program Files\Avast Software\Avast;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\felip\OneDrive\Desktop\android-studio\jre\bin\server
+
+VM Arguments:
+java_command: org.jetbrains.kotlin.cli.jvm.K2JVMCompiler @C:\Users\felip\AndroidStudioProjects\VideoApp\app\build\20211203_13955503135343501360.compiler.options
+java_class_path (initial): C:\Users\felip\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-compiler-embeddable\1.6.0\aa8da3bedc53c89219b84a0b40c7419431a13e76\kotlin-compiler-embeddable-1.6.0.jar;C:\Users\felip\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-reflect\1.6.0\a215a7f914d5916dc5fd2d45cea16524e0220203\kotlin-reflect-1.6.0.jar;C:\Users\felip\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib\1.6.0\a40b8b22529b733892edf4b73468ce598bb17f04\kotlin-stdlib-1.6.0.jar;C:\Users\felip\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-script-runtime\1.6.0\55f72526ddcff6fc77d72cdf949c7e3d9bd95620\kotlin-script-runtime-1.6.0.jar;C:\Users\felip\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-daemon-embeddable\1.6.0\d6242b37f4ce6b637d10847c7558446272ec8432\kotlin-daemon-embeddable-1.6.0.jar;C:\Users\felip\.gradle\caches\modules-2\files-2.1\org.jetbrains.intellij.deps\trove4j\1.0.20181211\216c2e14b070f334479d800987affe4054cd563f\trove4j-1.0.20181211.jar;C:\Users\felip\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\5.6.0\330f2244e9030119ab3030fc3fededc86713d9cc\jna-5.6.0.jar;C:\Users\felip\.gradle\caches\modules-2\files-2.1\org.jetbrains\annotations\13.0\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\annotations-13.0.jar;C:\Users\felip\.gradle\caches\modules-2\files-2.1\org.jetbrains.kotlin\kotlin-stdlib-common\1.6.0\7857e365f925cfa060f941c1357cda1f8790502c\kotlin-stdlib-common-1.6.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 2                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 67108864                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1065353216                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5825164                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122916538                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122916538                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\felip\AppData\Local\Microsoft\WindowsApps;C:\Users\felip\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\felip\AppData\Local\Yarn\bin;C:\Users\felip\AppData\Local\GitHubDesktop\bin;C:\Users\felip\AppData\Roaming\npm
+USERNAME=felip
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 23 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1348)
+OS uptime: 1 days 14:19 hours
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 23 stepping 10 microcode 0xa0c, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, tsc
+
+Memory: 4k page, system-wide physical 4061M (49M free)
+TotalPageFile size 4061M (AvailPageFile size 15M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 47M, peak: 111M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.11+9-b60-7590822) for windows-amd64 JRE (11.0.11+9-b60-7590822), built on Jul 29 2021 21:43:44 by "builder" with MS VC++ 14.0 (VS2015)
+
+END.

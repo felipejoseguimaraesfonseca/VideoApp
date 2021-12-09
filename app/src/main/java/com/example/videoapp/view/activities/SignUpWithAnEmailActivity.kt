@@ -1,11 +1,10 @@
 package com.example.videoapp.view.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.lifecycle.ViewModel
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.videoapp.R
 import com.example.videoapp.databinding.ActivitySignUpWithAnEmailBinding
@@ -22,6 +21,7 @@ class SignUpWithAnEmailActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpWithAnEmailBinding.inflate(layoutInflater)
         val view = binding.root
+        setTheme(R.style.Theme_VideoApp)
         setContentView(view)
 
         mViewModel = ViewModelProvider(

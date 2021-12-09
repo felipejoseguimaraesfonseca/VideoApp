@@ -6,16 +6,16 @@ import com.example.videoapp.data.model.UserEntity
 @Dao
 interface UserDao {
 
-    @Insert
-    suspend fun saveUser(userEntity: UserEntity)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun saveUser(vararg userEntity: UserEntity)
 
-    @Query("SELECT * from user_data WHERE email = :email and password = :password")
-    suspend fun getUser(email: String, password: String): UserEntity
+    @Query("SELECT * from user_data WHERE email LIKE :email AND password LIKE :password")
+    suspend fun getUser(email: String, password: String): List<UserEntity>
 
     @Update
-    suspend fun updateUser(userEntity: UserEntity)
+    suspend fun updateUser(vararg userEntity: UserEntity)
 
     @Delete
-    suspend fun deleteUser(userEntity: UserEntity)
+    suspend fun deleteUser(vararg userEntity: UserEntity)
 
 }

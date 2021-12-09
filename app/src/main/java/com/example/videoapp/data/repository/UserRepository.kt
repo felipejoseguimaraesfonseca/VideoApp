@@ -2,7 +2,6 @@ package com.example.videoapp.data.repository
 
 import android.content.Context
 import com.example.videoapp.data.model.UserEntity
-import java.lang.NumberFormatException
 
 class UserRepository(context: Context) {
 
@@ -18,7 +17,7 @@ class UserRepository(context: Context) {
         }
     }
 
-    suspend fun getUser(email: String, password: String): UserEntity {
+    suspend fun getUser(email: String, password: String): List<UserEntity> {
         return mDatabase.getUser(email, password)
     }
 

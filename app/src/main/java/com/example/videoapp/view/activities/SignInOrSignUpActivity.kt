@@ -1,9 +1,9 @@
 package com.example.videoapp.view.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.videoapp.R
 import com.example.videoapp.databinding.ActivitySignInOrSignUpBinding
 
@@ -15,6 +15,7 @@ class SignInOrSignUpActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInOrSignUpBinding.inflate(layoutInflater)
         val view = binding.root
+        setTheme(R.style.Theme_VideoApp)
         setContentView(view)
 
         setListeners()
