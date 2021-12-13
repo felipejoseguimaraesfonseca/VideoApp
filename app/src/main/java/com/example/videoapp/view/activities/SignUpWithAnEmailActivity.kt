@@ -15,7 +15,7 @@ class SignUpWithAnEmailActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivitySignUpWithAnEmailBinding
 
     private lateinit var mViewModel: UserViewModel
-    private var mUserId = 0
+    private var mUserId: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

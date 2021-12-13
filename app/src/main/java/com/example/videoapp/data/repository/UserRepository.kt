@@ -9,9 +9,8 @@ class UserRepository(context: Context) {
 
     suspend fun saveUser(user: UserEntity): Boolean? {
         return try {
-            val databaseSaveUserString = mDatabase.saveUser(user).toString()
-            val databaseSaveUserInt = Integer.parseInt(databaseSaveUserString)
-            databaseSaveUserInt > 0
+            val databaseSaveUserLong = mDatabase.saveUser(user).toString().toLong()
+            databaseSaveUserLong > 0
         } catch (e: NumberFormatException) {
             null
         }
@@ -22,8 +21,8 @@ class UserRepository(context: Context) {
     }
 
     suspend fun updateUser(user: UserEntity): Boolean {
-        val mDatabaseInt = mDatabase.updateUser(user).toString().toInt()
-        return mDatabaseInt > 0
+        val mDatabaseLong = mDatabase.updateUser(user).toString().toLong()
+        return mDatabaseLong > 0
     }
 
     suspend fun deleteUser(user: UserEntity): Boolean {

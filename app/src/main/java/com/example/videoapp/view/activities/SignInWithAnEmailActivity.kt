@@ -57,6 +57,7 @@ class SignInWithAnEmailActivity : AppCompatActivity(), View.OnClickListener {
                 val observer = observe()
 
                 if (observer.toString().toInt() == R.string.account_logged_successfully) {
+                    mViewModel.getUser(email, password)
                     val intent = Intent(this, NavigationActivity::class.java)
                     startActivity(intent)
                     finish()

@@ -33,19 +33,19 @@ class UserViewModel constructor(application: Application) : AndroidViewModel(app
         private val TAG = UserViewModel::class.java.simpleName
     }
 
-    fun saveUser(id: Int, firstName: String, lastName: String, email: String, password: String) {
+    fun saveUser(userId: Long, firstName: String, lastName: String, email: String, password: String) {
         try {
             if (hasInternetConnection()) {
                 viewModelScope.launch(Dispatchers.IO) {
                     val user = UserEntity().apply {
-                        this.id = id
+                        this.userId = userId
                         this.firstName = firstName
                         this.lastName = lastName
                         this.email = email
                         this.password = password
                     }
                     try {
-                        if (id == 0) {
+                        if (userId.toString().toInt() == 0) {
                             mSaveUser.postValue(mUserRepository.saveUser(user))
                             _messageEventData.postValue(R.string.account_saved_successfully)
                         } else {
@@ -69,11 +69,9 @@ class UserViewModel constructor(application: Application) : AndroidViewModel(app
             if (hasInternetConnection()) {
                 viewModelScope.launch(Dispatchers.IO) {
                     try {
-                        val user = mUserRepository.getUser(email, password)
-                        if (user.email == email && user.password == password) {
-                            mUserRepository.getUser(email, password)
-                            _messageEventData.postValue(R.string.account_logged_successfully)
-                        }
+                        mUserRepository.getUser(email, password)
+                        _messageEventData.postValue(R.string.account_logged_successfully)
+
                     } catch (exception: Exception) {
                         _messageEventData.postValue(R.string.account_logged_failure)
                         Log.e(TAG, exception.toString())
@@ -86,19 +84,19 @@ class UserViewModel constructor(application: Application) : AndroidViewModel(app
         }
     }
 
-    fun updateUser(id: Int, firstName: String, lastName: String, email: String, password: String) {
+    fun updateUser(userId: Long, firstName: String, lastName: String, email: String, password: String) {
         try {
             if (hasInternetConnection()) {
                 viewModelScope.launch(Dispatchers.IO) {
                     val user = UserEntity().apply {
-                        this.id = id
+                        this.userId = userId
                         this.firstName = firstName
                         this.lastName = lastName
                         this.email = email
                         this.password = password
                     }
                     try {
-                        if (id > 0) {
+                        if (userId > 0) {
                             mUpdateUser.postValue(mUserRepository.updateUser(user))
                             _messageEventData.postValue(R.string.account_updated_successfully)
                         }
@@ -114,19 +112,19 @@ class UserViewModel constructor(application: Application) : AndroidViewModel(app
         }
     }
 
-    fun deleteUser(id: Int, firstName: String, lastName: String, email: String, password: String) {
+    fun deleteUser(userId: Long, firstName: String, lastName: String, email: String, password: String) {
         try {
             if (hasInternetConnection()) {
                 viewModelScope.launch(Dispatchers.IO) {
                     val user = UserEntity().apply {
-                        this.id = id
+                        this.userId = userId
                         this.firstName = firstName
                         this.lastName = lastName
                         this.email = email
                         this.password = password
                     }
                     try {
-                        if (id > 0) {
+                        if (userId > 0) {
                             mDeleteUser.postValue(mUserRepository.deleteUser(user))
                             _messageEventData.postValue(R.string.account_deleted_successfully)
                         }
