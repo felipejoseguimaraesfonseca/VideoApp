@@ -7,25 +7,19 @@ class UserRepository(context: Context) {
 
     private val mDatabase = AppDatabase.getDatabase(context).userDao()
 
-    suspend fun saveUser(user: UserEntity): Boolean? {
-        return try {
-            val databaseSaveUserLong = mDatabase.saveUser(user).toString().toLong()
-            databaseSaveUserLong > 0
-        } catch (e: NumberFormatException) {
-            null
-        }
+    suspend fun saveUser(user: UserEntity) {
+       mDatabase.saveUser(user)
     }
 
     suspend fun getUser(email: String, password: String): List<UserEntity> {
         return mDatabase.getUser(email, password)
     }
 
-    suspend fun updateUser(user: UserEntity): Boolean {
-        val mDatabaseLong = mDatabase.updateUser(user).toString().toLong()
-        return mDatabaseLong > 0
+    suspend fun updateUser(user: UserEntity) {
+        mDatabase.updateUser(user)
     }
 
-    suspend fun deleteUser(user: UserEntity): Boolean {
-        return mDatabase.deleteUser(user).toString().toBoolean()
+    suspend fun deleteUser(user: UserEntity) {
+        mDatabase.deleteUser(user)
     }
 }

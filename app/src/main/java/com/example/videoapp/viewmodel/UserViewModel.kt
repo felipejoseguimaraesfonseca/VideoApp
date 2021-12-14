@@ -21,9 +21,9 @@ class UserViewModel constructor(application: Application) : AndroidViewModel(app
 
     private lateinit var mUserRepository: UserRepository
 
-    private val mSaveUser = MutableLiveData<Boolean>()
-    private val mUpdateUser = MutableLiveData<Boolean>()
-    private val mDeleteUser = MutableLiveData<Boolean>()
+    private val mSaveUser = MutableLiveData<Unit>()
+    private val mUpdateUser = MutableLiveData<Unit>()
+    private val mDeleteUser = MutableLiveData<Unit>()
 
     private val _messageEventData = MutableLiveData<Int>()
     val messageEventData: LiveData<Int>
