@@ -18,7 +18,6 @@ class NavigationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityNavigationBinding.inflate(layoutInflater)
-        setTheme(R.style.Theme_VideoApp)
         setContentView(binding.root)
 
         val navView: BottomNavigationView = binding.bottomNavigation

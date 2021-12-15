@@ -31,16 +31,10 @@
             android:name=".view.activities.SignUpWithFacebookActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.SignUpWithAnEmailActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.activities.SignInWithFacebookActivity"
             android:exported="false" />
         <activity
             android:name=".view.activities.SignInWithGoogleActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.activities.SignInWithAnEmailActivity"
             android:exported="false" />
         <activity
             android:name=".view.activities.SignInOrSignUpActivity"

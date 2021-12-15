@@ -20,7 +20,6 @@ class SignInOrSignUpActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInOrSignUpBinding.inflate(layoutInflater)
         val view = binding.root
-        setTheme(R.style.Theme_VideoApp)
         setContentView(view)
 
         requestPermissions()
