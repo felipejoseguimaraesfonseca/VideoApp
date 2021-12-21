@@ -22,14 +22,7 @@
        >
         <activity
             android:name=".view.activities.NavigationActivity"
-            android:exported="false"
-            android:label="@string/title_activity_navigation" />
-        <activity
-            android:name=".view.activities.SignUpWithGoogleActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.activities.SignUpWithFacebookActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".view.activities.SignInWithFacebookActivity"
             android:exported="false" />
@@ -37,18 +30,15 @@
             android:name=".view.activities.SignInWithGoogleActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.SignInOrSignUpActivity"
+            android:name=".view.activities.SignInWithActivity"
             android:exported="true"
-            android:label="SignInOrSignUp">
+            android:label="SignInWith">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".view.activities.SplashActivity"
-            android:exported="false"/>
     </application>
 
 </manifest>

@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:logo="@drawable/video_app_logo_tiny"
+        app:logo="@drawable/ic_video_app_logo_tiny"
         app:menu="@menu/toolbar_menu"
         app:title="@string/app_name"
         app:titleMarginStart="@dimen/title_margin_start_23" />

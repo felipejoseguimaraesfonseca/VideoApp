@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app_orange_color"
+    tools:context=".view.activities.SignInWithActivity">
+
+    <Button
+        android:id="@+id/sign_in_with_facebook_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="275dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_rounded_shape_blue_color"
+        android:drawableStart="@drawable/facebook_logo_icon"
+        android:drawablePadding="@dimen/drawable_padding_size"
+        android:paddingStart="@dimen/padding_start_size_23"
+        android:paddingEnd="@dimen/padding_end_size"
+        android:text="@string/sign_in_with_facebook"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/text_white_color"
+        android:textSize="@dimen/edit_text_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_with_google_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sign_in_with_google_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="336dp"
+        android:background="@drawable/button_rounded_shape_light_grey_color"
+        android:drawableStart="@drawable/google_logo_icon"
+        android:drawablePadding="@dimen/drawable_padding_size"
+        android:paddingStart="@dimen/padding_start_size_23"
+        android:paddingEnd="@dimen/padding_end_size"
+        android:text="@string/sign_in_with_google"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/text_black_color"
+        android:textSize="@dimen/edit_text_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_with_facebook_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
