@@ -55,5 +55,5 @@
         Password and Confirm password are not the same.
     </string>
 
-
+    <string name="authenticationFailed">Authentication failed.</string>
 </resources>
