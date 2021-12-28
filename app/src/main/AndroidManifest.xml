@@ -23,12 +23,7 @@
         <activity
             android:name=".view.activities.NavigationActivity"
             android:exported="false"/>
-        <activity
-            android:name=".view.activities.SignInWithFacebookActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.activities.SignInWithGoogleActivity"
-            android:exported="false" />
+
         <activity
             android:name=".view.activities.SignInWithActivity"
             android:exported="true"

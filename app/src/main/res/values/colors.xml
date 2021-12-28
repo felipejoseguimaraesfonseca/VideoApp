@@ -25,15 +25,8 @@
     <color name="menu_white_color">#FFFFFF</color>
     <color name="menu_black_color">#000000</color>
 
-    <color name="background_button_dark_orange_color">#FF4600</color>
     <color name="background_button_blue_color">#0000FF</color>
     <color name="background_button_light_grey_color">#D6D3D3</color>
-    <color name="background_button_white_color">#FFFFFF</color>
-    <color name="background_button_black_color">#000000</color>
-
-    <color name="background_edit_text_dark_orange_color">#FF4600</color>
-    <color name="background_edit_text_blue_color">#0000FF</color>
-    <color name="background_edit_text_grey_color">#D6D3D3</color>
 
     <color name="text_white_color">#FFFFFFFF</color>
     <color name="text_black_color">#000000</color>
@@ -41,9 +34,5 @@
     <color name="text_dark_orange_color">#FF4600</color>
     <color name="text_light_grey_color">#D6D3D3</color>
 
-    <color name="text_white_transparent_color">#B2FFFFFF</color>
-    <color name="text_black_transparent_color">#B2000000</color>
-
     <color name="icon_tint_white_color">#FFFFFF</color>
-    <color name="icon_tint_black_color">#000000</color>
 </resources>
