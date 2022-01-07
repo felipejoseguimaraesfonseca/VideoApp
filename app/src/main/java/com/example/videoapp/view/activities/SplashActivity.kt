@@ -1,16 +1,8 @@
 package com.example.videoapp.view.activities
 
-import android.Manifest
 import android.annotation.SuppressLint
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import com.example.videoapp.R
 
 @SuppressLint("CustomSplashScreen")
@@ -19,10 +11,10 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        requestPermissions()
+        //requestPermissions()
     }
 
-    private fun hasReadExternalStoragePermission() =
+    /*private fun hasReadExternalStoragePermission() =
         ActivityCompat.checkSelfPermission(
             this,
             Manifest.permission.READ_EXTERNAL_STORAGE
@@ -79,13 +71,13 @@ class SplashActivity : AppCompatActivity() {
                 }
             }
         }
-    }
+    }*/
 
-    private fun splashTransaction() {
+    /*private fun splashTransaction() {
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this@SplashActivity, SignInWithActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)
-    }
+    }*/
 }

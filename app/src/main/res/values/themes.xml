@@ -14,6 +14,7 @@
         <!-- Customize your theme here. -->
 
         <item name="android:background">@color/background_app_orange_color</item>
+        <item name="android:windowBackground">@color/background_app_orange_color</item>
     </style>
 
 </resources>
