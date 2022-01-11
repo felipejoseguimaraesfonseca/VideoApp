@@ -13,6 +13,7 @@
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/edit_text_rounded_shape_light_grey_color.xml" value="0.1955" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_facebook_logo.xml" value="0.2" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_google_logo.xml" value="0.2" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_splash_screen_logo.xml" value="0.17314814814814813" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_subscriptions_white_48dp.xml" value="0.2" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_video_app_logo.xml" value="0.2" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/splash_image.xml" value="0.2" />
@@ -25,7 +26,7 @@
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/activity_sign_up_with_an_email.xml" value="0.25" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/activity_sign_up_with_facebook.xml" value="0.25" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/activity_sign_up_with_google.xml" value="0.25" />
-        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/activity_splash.xml" value="0.2" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_about_channel.xml" value="0.19322916666666667" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_general_settings.xml" value="0.1" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_home.xml" value="0.19322916666666667" />
@@ -40,7 +41,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

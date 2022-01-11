@@ -1,11 +1,10 @@
 package com.example.videoapp.view.activities
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.videoapp.databinding.ActivitySignInWithBinding
 
-abstract class SignInWithActivity : AppCompatActivity(), View.OnClickListener {
+class SignInWithActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignInWithBinding
     /*private lateinit var auth: FirebaseAuth
