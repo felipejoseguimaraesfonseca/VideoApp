@@ -1,15 +1,32 @@
 package com.example.videoapp.view.activities
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.videoapp.R
 import com.example.videoapp.databinding.ActivitySignInWithBinding
+import com.facebook.AccessToken
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginResult
+import com.facebook.login.widget.LoginButton
+import com.google.firebase.auth.FacebookAuthProvider
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
-class SignInWithActivity : AppCompatActivity() {
+class SignInWithActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivitySignInWithBinding
-    /*private lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth
     private lateinit var callbackManager: CallbackManager
-    private lateinit var loginButton: LoginButton*/
+    private lateinit var loginButton: LoginButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,24 +34,26 @@ class SignInWithActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        //setListeners()
+        auth = Firebase.auth
+
+        setListeners()
     }
 
-    /*override fun onClick(view: View) {
+    override fun onClick(view: View) {
         val id = view.id
 
         if (id == R.id.sign_in_with_facebook_button) {
             signInWithFacebook()
         }
-    }*/
+    }
 
-    /*private fun signInWithFacebook() {
-        auth = Firebase.auth
+    private fun signInWithFacebook() {
         callbackManager = CallbackManager.Factory.create()
 
         loginButton.setPermissions("email", "public-profile")
-        loginButton.registerCallback(callbackManager, object : FacebookCallback<LoginResult>{
+        loginButton.registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
 
+            @SuppressLint("LogConditional")
             override fun onSuccess(result: LoginResult) {
                 Log.d(TAG, "facebook:onSuccess:$result")
                 handleFacebookAccessToken(result.accessToken)
@@ -61,9 +80,10 @@ class SignInWithActivity : AppCompatActivity() {
         callbackManager.onActivityResult(requestCode, resultCode, data)
     }
 
-    private fun handleFacebookAccessToken(token: AccessToken) {
+    @SuppressLint("LogConditional")
+    internal fun handleFacebookAccessToken(token: AccessToken) {
         Log.d(TAG, "handleFacebookAccessToken:$token")
-        
+
         val credential = FacebookAuthProvider.getCredential(token.token)
         auth.signInWithCredential(credential).addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
@@ -73,6 +93,7 @@ class SignInWithActivity : AppCompatActivity() {
 
                 val intent = Intent(this, NavigationActivity::class.java)
                 startActivity(intent)
+                finish()
             } else {
                 Log.w(TAG, "signInWithCredential:failure", task.exception)
                 Toast.makeText(
@@ -83,15 +104,15 @@ class SignInWithActivity : AppCompatActivity() {
                 updateUI(null)
             }
         }
-    }*/
+    }
 
-    /*private fun setListeners() {
+    private fun setListeners() {
         binding.signInWithFacebookButton.setOnClickListener(this)
     }
-    
-    abstract fun updateUI(user: FirebaseUser?)
+
+    private fun updateUI(user: FirebaseUser?){}
     
     companion object {
         private const val TAG = "FacebookLogin"
-    }*/
+    }
 }
