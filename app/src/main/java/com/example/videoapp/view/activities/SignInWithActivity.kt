@@ -8,10 +8,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.videoapp.R
 import com.example.videoapp.databinding.ActivitySignInWithBinding
-import com.facebook.AccessToken
-import com.facebook.CallbackManager
-import com.facebook.FacebookCallback
-import com.facebook.FacebookException
+import com.facebook.*
 import com.facebook.login.LoginResult
 import com.facebook.login.widget.LoginButton
 import com.google.firebase.auth.FacebookAuthProvider
@@ -35,13 +32,13 @@ class SignInWithActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        signInWithFacebookButton = binding.signInWithFacebookButton as LoginButton
-        signInWithFacebookButton.setOnClickListener {
-            callbackManager = CallbackManager.Factory.create()
+        FacebookSdk.sdkInitialize(applicationContext)
 
-            signInWithFacebookButton.setPermissions("email", "public-profile")
-            signInWithFacebookButton.registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
-
+        signInWithFacebookButton = binding.signInWithFacebookButton
+        callbackManager = CallbackManager.Factory.create()
+        signInWithFacebookButton.setPermissions("email", "public-profile")
+        signInWithFacebookButton.registerCallback(
+            callbackManager, object : FacebookCallback<LoginResult> {
                 @SuppressLint("LogConditional")
                 override fun onSuccess(result: LoginResult) {
                     Log.d(TAG, "facebook:onSuccess:$result")
@@ -56,19 +53,12 @@ class SignInWithActivity : AppCompatActivity() {
                     Log.d(TAG, "facebook:onError", error)
                 }
             })
-        }
-
     }
 
     override fun onStart() {
         super.onStart()
         val currentUser = auth.currentUser
         updateUI(currentUser)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        callbackManager.onActivityResult(requestCode, resultCode, data)
     }
 
     @SuppressLint("LogConditional")
@@ -88,8 +78,8 @@ class SignInWithActivity : AppCompatActivity() {
             } else {
                 Log.w(TAG, "signInWithCredential:failure", task.exception)
                 Toast.makeText(
-                    baseContext, 
-                    R.string.authenticationFailed, 
+                    baseContext,
+                    R.string.authenticationFailed,
                     Toast.LENGTH_SHORT
                 ).show()
                 updateUI(null)
@@ -97,8 +87,8 @@ class SignInWithActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateUI(user: FirebaseUser?){}
-    
+    private fun updateUI(user: FirebaseUser?) {}
+
     companion object {
         private const val TAG = "FacebookLogin"
     }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".view.activities.SignInWithActivity">
 
-    <Button
+    <com.facebook.login.widget.LoginButton
         android:id="@+id/sign_in_with_facebook_button"
         android:layout_width="@dimen/sign_in_with_button_width_size"
         android:layout_height="@dimen/sign_in_with_button_height_size"
@@ -14,15 +14,8 @@
         android:layout_marginTop="275dp"
         android:layout_marginEnd="54dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/button_rounded_shape_blue_color"
-        android:drawableStart="@drawable/ic_facebook_logo"
-        android:drawablePadding="@dimen/drawable_padding_size"
-        android:paddingStart="@dimen/padding_start_size_23"
-        android:paddingEnd="@dimen/padding_end_size"
-        android:text="@string/sign_in_with_facebook"
-        android:textAlignment="viewStart"
+        android:layout_gravity="center_horizontal"
         android:textAllCaps="false"
-        android:textColor="@color/text_white_color"
         android:textSize="@dimen/sign_in_with_button_text_size"
         app:layout_constraintBottom_toTopOf="@+id/sign_in_with_google_button"
         app:layout_constraintEnd_toEndOf="parent"
