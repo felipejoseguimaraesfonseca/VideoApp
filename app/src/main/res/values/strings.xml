@@ -19,4 +19,8 @@
 
     <string name="facebook_app_id">3130073197282055</string>
     <string name="fb_login_protocol_scheme">fb3130073197282055</string>
+
+    <string name="default_web_client_id">
+        1079580502151-7p2d8gnfsmo2sq21cpcftd9o0nb5t2fh.apps.googleusercontent.com
+    </string>
 </resources>

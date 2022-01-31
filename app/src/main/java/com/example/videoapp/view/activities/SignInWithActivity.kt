@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.videoapp.R
@@ -11,6 +12,7 @@ import com.example.videoapp.databinding.ActivitySignInWithBinding
 import com.facebook.*
 import com.facebook.login.LoginResult
 import com.facebook.login.widget.LoginButton
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -20,9 +22,13 @@ import com.google.firebase.ktx.Firebase
 class SignInWithActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignInWithBinding
+
     private lateinit var auth: FirebaseAuth
     private lateinit var callbackManager: CallbackManager
+    private lateinit var googleSignInClient: GoogleSignInClient
+
     private lateinit var signInWithFacebookButton: LoginButton
+    private lateinit var signInWithGoogleButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +59,19 @@ class SignInWithActivity : AppCompatActivity() {
                     Log.d(TAG, "facebook:onError", error)
                 }
             })
+
+        val gso = GoogleSignInOptions.Builder(
+            GoogleSignInOptions.DEFAULT_SIGN_IN
+        ).requestIdToken(
+            getString(R.string.default_web_client_id)
+        ).requestEmail().build()
+
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
+
+        signInWithGoogleButton = binding.signInWithGoogleButton
+        signInWithGoogleButton.setOnClickListener {
+
+        }
     }
 
     override fun onStart() {
@@ -90,6 +109,7 @@ class SignInWithActivity : AppCompatActivity() {
     private fun updateUI(user: FirebaseUser?) {}
 
     companion object {
-        private const val TAG = "FacebookLogin"
+        private const val TAG = "SignWithActivity"
+        private const val RC_SIGN_IN = 9001
     }
 }
