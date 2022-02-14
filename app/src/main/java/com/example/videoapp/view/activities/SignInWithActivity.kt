@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.videoapp.Keys
 import com.example.videoapp.R
 import com.example.videoapp.databinding.ActivitySignInWithBinding
 import com.facebook.*
@@ -33,6 +34,8 @@ class SignInWithActivity : AppCompatActivity() {
 
     private lateinit var signInWithFacebookButton: LoginButton
     private lateinit var signInWithGoogleButton: Button
+
+    private lateinit var keys: Keys
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,9 +69,7 @@ class SignInWithActivity : AppCompatActivity() {
 
         val gso = GoogleSignInOptions.Builder(
             GoogleSignInOptions.DEFAULT_SIGN_IN
-        ).requestIdToken(
-            getString(R.string.default_web_client_id)
-        ).requestEmail().build()
+        ).requestIdToken(keys.defaultWebClientId).requestEmail().build()
 
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
