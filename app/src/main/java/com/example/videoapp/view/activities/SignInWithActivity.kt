@@ -19,7 +19,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -34,8 +33,6 @@ class SignInWithActivity : AppCompatActivity() {
 
     private lateinit var signInWithFacebookButton: LoginButton
     private lateinit var signInWithGoogleButton: Button
-
-    private lateinit var keys: Keys
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,11 +64,14 @@ class SignInWithActivity : AppCompatActivity() {
                 }
             })
 
+        val keys = Keys()
+
         val gso = GoogleSignInOptions.Builder(
             GoogleSignInOptions.DEFAULT_SIGN_IN
         ).requestIdToken(keys.defaultWebClientId).requestEmail().build()
-
         googleSignInClient = GoogleSignIn.getClient(this, gso)
+
+        auth = FirebaseAuth.getInstance()
 
         signInWithGoogleButton = binding.signInWithGoogleButton
         signInWithGoogleButton.setOnClickListener {
@@ -79,22 +79,21 @@ class SignInWithActivity : AppCompatActivity() {
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-        val currentUser = auth.currentUser
-        updateUI(currentUser)
-    }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == RC_SIGN_IN) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            try {
-                val account = task.getResult(ApiException::class.java)!!
-                Log.d(TAG, "firebaseAuthGoogle:" + account.id)
-                firebaseAuthWithGoogle(account.idToken!!)
-            } catch (e: ApiException) {
-                Log.w(TAG, "Google sign in failed", e)
+            val exception = task.exception
+            if(task.isSuccessful) {
+                try {
+                    val account = task.getResult(ApiException::class.java)!!
+                    Log.d(TAG, "firebaseAuthGoogle:" + account.id)
+                    firebaseAuthWithGoogle(account.idToken!!)
+                } catch (e: ApiException) {
+                    Log.w(TAG, "Google sign in failed", e)
+                }
+            } else {
+                Log.w(TAG, exception.toString())
             }
         }
     }
@@ -107,9 +106,6 @@ class SignInWithActivity : AppCompatActivity() {
         auth.signInWithCredential(credential).addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
                 Log.d(TAG, "signInWithCredential:success")
-                val user = auth.currentUser
-                updateUI(user)
-
                 val intent = Intent(this, NavigationActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -120,7 +116,6 @@ class SignInWithActivity : AppCompatActivity() {
                     R.string.authenticationFailed,
                     Toast.LENGTH_SHORT
                 ).show()
-                updateUI(null)
             }
         }
     }
@@ -130,15 +125,11 @@ class SignInWithActivity : AppCompatActivity() {
         auth.signInWithCredential(credential).addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
                 Log.d(TAG, "signInWithCredential:success")
-                val user = auth.currentUser
-                updateUI(user)
-
                 val intent = Intent(this, NavigationActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {
                 Log.w(TAG, "siInWithCredential:failure", task.exception)
-                updateUI(null)
             }
         }
     }
@@ -147,8 +138,6 @@ class SignInWithActivity : AppCompatActivity() {
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
-
-    private fun updateUI(user: FirebaseUser?) {}
 
     companion object {
         private const val TAG = "SignWithActivity"
