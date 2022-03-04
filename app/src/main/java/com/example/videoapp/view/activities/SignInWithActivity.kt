@@ -125,11 +125,11 @@ class SignInWithActivity : AppCompatActivity() {
         auth.signInWithCredential(credential).addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
                 Log.d(TAG, "signInWithCredential:success")
-                val intent = Intent(this, NavigationActivity::class.java)
+                val intent = Intent(this@SignInWithActivity, NavigationActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {
-                Log.w(TAG, "siInWithCredential:failure", task.exception)
+                Log.w(TAG, "signInWithCredential:failure", task.exception)
             }
         }
     }
@@ -140,7 +140,7 @@ class SignInWithActivity : AppCompatActivity() {
     }
 
     companion object {
-        private const val TAG = "SignWithActivity"
+        private const val TAG = "SignInWithActivity"
         private const val RC_SIGN_IN = 9001
     }
 }
