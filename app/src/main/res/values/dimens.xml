@@ -15,6 +15,10 @@
 
     <dimen name="title_margin_start_23">23dp</dimen>
 
+    <dimen name="video_text_title_size">15sp</dimen>
+    <dimen name="video_text_information_size">12sp</dimen>
+    <dimen name="video_text_title_width">300dp</dimen>
+
     <dimen name="design_bottom_navigation_text_size" tools:override="true">13sp</dimen>
     <dimen name="design_bottom_navigation_active_text_size" tools:override="true">13sp</dimen>
 

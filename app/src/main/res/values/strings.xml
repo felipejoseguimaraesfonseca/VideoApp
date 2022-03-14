@@ -20,4 +20,13 @@
     <string name="facebook_app_id">3130073197282055</string>
     <string name="fb_login_protocol_scheme">fb3130073197282055</string>
 
+    <string name="video_text_title">
+        The Flash origins in comic books - Pre-Crisis,
+        New 52 and Rebirth
+    </string>
+
+    <string name="video_text_information">
+        The Flash Channel - 500K views -  1 month ago
+    </string>
+
 </resources>
