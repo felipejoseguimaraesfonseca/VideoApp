@@ -4,17 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragments.HomeFragment">
+    tools:context=".view.fragments.SubscriptionsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <LinearLayout
+            android:id="@+id/subscriptions_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_editor_absoluteY="150dp">
+
+            <ImageView
+                android:id="@+id/channel_logo_subscriptions"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_channel_logo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/all_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_editor_absoluteX="330dp"
+            app:layout_editor_absoluteY="165dp">
+
+            <TextView
+                android:id="@+id/all_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:textColor="@color/text_blue_color"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
         <RelativeLayout
             android:id="@+id/videos_relative_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_editor_absoluteY="250dp">
 
             <VideoView
                 android:id="@+id/video"
@@ -61,5 +97,6 @@
         </RelativeLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.core.widget.NestedScrollView>
