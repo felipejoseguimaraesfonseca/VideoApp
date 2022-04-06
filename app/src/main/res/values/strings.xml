@@ -29,7 +29,21 @@
         The Flash Channel - 500K views -  1 month ago
     </string>
 
+    <string name="text_channel_title">The Flash Channel</string>
+
     <string name="all">ALL</string>
 
     <string name="recent">Recent</string>
+    <string name="history_text">History</string>
+    <string name="your_videos_text">Your videos</string>
+    <string name="watch_later_text">Watch later</string>
+
+    <string name="playlists_text">Playlists</string>
+    <string name="your_playlists">Your playlists</string>
+    <string name="create_new_playlist">Create new playlist</string>
+    <string name="saved_playlists">Saved playlists</string>
+
+    <string name="video_length_text">6 videos</string>
+    <string name="playlist_videos_length">6</string>
+
 </resources>

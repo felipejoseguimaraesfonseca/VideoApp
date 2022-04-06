@@ -35,4 +35,7 @@
     <color name="text_light_grey_color">#D6D3D3</color>
 
     <color name="icon_tint_white_color">#FFFFFF</color>
+
+    <color name="playlist_rectangle_color">#66000000</color>
+    <color name="background_playlist_videos_length_color">#00000000</color>
 </resources>

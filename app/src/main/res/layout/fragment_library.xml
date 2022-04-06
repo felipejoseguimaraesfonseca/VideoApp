@@ -1,14 +1,336 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.fragments.LibraryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_library_constraint_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/recents_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_editor_absoluteX="20dp"
+            app:layout_editor_absoluteY="80dp">
+
+            <TextView
+                android:id="@+id/recent_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recent"
+                android:textColor="@color/text_white_color"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/recent_watched_videos_relative_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_editor_absoluteX="20dp"
+            app:layout_editor_absoluteY="105dp">
+
+            <VideoView
+                android:id="@+id/recent_watched_videos"
+                android:layout_width="110dp"
+                android:layout_height="55dp" />
+
+            <TextView
+                android:id="@+id/video_title"
+                android:layout_width="100dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="55dp"
+                android:text="@string/video_text_title"
+                android:textColor="@color/text_white_color"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/expand_more_the_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="79dp"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/ic_more_horizontal" />
+
+            <TextView
+                android:id="@+id/channel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="83dp"
+                android:text="@string/text_channel_title"
+                android:textColor="@color/text_white_color"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/more_options"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="58dp"
+                android:src="@drawable/ic_more_vert_white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/other_options_relative_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_editor_absoluteX="20dp"
+            app:layout_editor_absoluteY="225dp">
+
+            <ImageView
+                android:id="@+id/history_image"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:src="@drawable/ic_history_white" />
+
+            <TextView
+                android:id="@+id/history_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/history_text"
+                android:textColor="@color/text_white_color"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/your_videos_image"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_your_videos_white" />
+
+            <TextView
+                android:id="@+id/your_videos_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="55dp"
+                android:text="@string/your_videos_text"
+                android:textColor="@color/text_white_color"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/watch_later_image"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/ic_watch_later_white" />
+
+            <TextView
+                android:id="@+id/watch_later_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="105dp"
+                android:text="@string/watch_later_text"
+                android:textColor="@color/text_white_color"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/playlists_relative_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_editor_absoluteX="20dp"
+            app:layout_editor_absoluteY="380dp">
+
+            <TextView
+                android:id="@+id/playlists_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/playlists_text"
+                android:textColor="@color/text_white_color"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/your_playlists_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/your_playlists"
+                android:textColor="@color/text_black_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/create_new_playlist_image"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_add_blue" />
+
+            <TextView
+                android:id="@+id/create_new_playlist_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="55dp"
+                android:text="@string/create_new_playlist"
+                android:textColor="@color/text_blue_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <VideoView
+                android:id="@+id/your_playlists_videos"
+                android:layout_width="110dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="90dp" />
+
+            <View
+                android:id="@+id/your_playlists_videos_length"
+                android:layout_width="30dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="90dp"
+                android:background="@color/playlist_rectangle_color" />
+
+            <TextView
+                android:id="@+id/your_playlists_videos_length_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="107dp"
+                android:background="@color/background_playlist_videos_length_color"
+                android:text="@string/playlist_videos_length"
+                android:textColor="@color/text_white_color" />
+
+            <TextView
+                android:id="@+id/your_playlists_video_title"
+                android:layout_width="230dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="90dp"
+                android:text="@string/video_text_title"
+                android:textColor="@color/text_white_color"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/your_playlists_channel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="117dp"
+                android:text="@string/text_channel_title"
+                android:textColor="@color/text_white_color"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/your_playlists_videos_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="131dp"
+                android:text="@string/video_length_text"
+                android:textColor="@color/text_white_color"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/your_playlists_expand_more"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="175dp"
+                android:layout_marginTop="150dp"
+                android:src="@drawable/ic_expand_more_white" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/saved_playlists_relative_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_editor_absoluteX="20dp"
+            app:layout_editor_absoluteY="580dp">
+
+            <TextView
+                android:id="@+id/saved_playlists_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saved_playlists"
+                android:textColor="@color/text_black_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <VideoView
+                android:id="@+id/saved_playlists_videos"
+                android:layout_width="110dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="25dp" />
+
+            <View
+                android:id="@+id/saved_playlists_length"
+                android:layout_width="30dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/playlist_rectangle_color" />
+
+            <TextView
+                android:id="@+id/saved_playlists_videos_length_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="42dp"
+                android:background="@color/background_playlist_videos_length_color"
+                android:text="@string/playlist_videos_length"
+                android:textColor="@color/text_white_color" />
+
+            <TextView
+                android:id="@+id/saved_playlists_video_title"
+                android:layout_width="230dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/video_text_title"
+                android:textColor="@color/text_white_color"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/saved_playlists_channel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="52dp"
+                android:text="@string/text_channel_title"
+                android:textColor="@color/text_white_color"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/saved_playlists_videos_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="66dp"
+                android:text="@string/video_length_text"
+                android:textColor="@color/text_white_color"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/saved_playlists_expand_more"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="175dp"
+                android:layout_marginTop="85dp"
+                android:src="@drawable/ic_expand_more_white" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>
