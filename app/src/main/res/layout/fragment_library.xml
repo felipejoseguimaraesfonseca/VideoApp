@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".view.fragments.LibraryFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:id="@+id/fragment_library_constraint_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -16,8 +16,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_editor_absoluteX="20dp"
-            app:layout_editor_absoluteY="80dp">
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp">
 
             <TextView
                 android:id="@+id/recent_text"
@@ -34,8 +34,8 @@
             android:id="@+id/recent_watched_videos_relative_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_editor_absoluteX="20dp"
-            app:layout_editor_absoluteY="105dp">
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="105dp">
 
             <VideoView
                 android:id="@+id/recent_watched_videos"
@@ -83,8 +83,8 @@
             android:id="@+id/other_options_relative_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_editor_absoluteX="20dp"
-            app:layout_editor_absoluteY="225dp">
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="225dp">
 
             <ImageView
                 android:id="@+id/history_image"
@@ -145,8 +145,8 @@
             android:id="@+id/playlists_relative_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_editor_absoluteX="20dp"
-            app:layout_editor_absoluteY="380dp">
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="380dp">
 
             <TextView
                 android:id="@+id/playlists_text"
@@ -254,8 +254,8 @@
             android:id="@+id/saved_playlists_relative_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_editor_absoluteX="20dp"
-            app:layout_editor_absoluteY="580dp">
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="580dp">
 
             <TextView
                 android:id="@+id/saved_playlists_text"
@@ -331,6 +331,6 @@
 
         </RelativeLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 
 </androidx.core.widget.NestedScrollView>

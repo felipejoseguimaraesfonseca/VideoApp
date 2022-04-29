@@ -1,14 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/sheet_dark_orange_color"
     tools:context=".view.fragments.UploadFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/create"
+        android:textColor="@color/text_white_color"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:background="@color/background_transparent"/>
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="365dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/background_transparent"
+        android:src="@drawable/ic_close_white" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="75dp"
+        android:background="@color/background_transparent"
+        android:src="@drawable/ic_upload_video_white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/background_transparent"
+        android:text="@string/upload_video"
+        android:textColor="@color/text_white_color"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/background_transparent"
+        android:src="@drawable/ic_go_live_white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="145dp"
+        android:text="@string/go_live"
+        android:textColor="@color/text_white_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@color/background_transparent"/>
+
+
+</RelativeLayout>

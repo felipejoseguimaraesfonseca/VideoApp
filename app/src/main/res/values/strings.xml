@@ -46,4 +46,8 @@
     <string name="video_length_text">6 videos</string>
     <string name="playlist_videos_length">6</string>
 
+    <string name="create">Create</string>
+    <string name="upload_video">Upload video</string>
+    <string name="go_live">Go live</string>
+
 </resources>

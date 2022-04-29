@@ -16,14 +16,18 @@
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_facebook_logo.xml" value="0.2" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_google_logo.xml" value="0.2" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_history_white.xml" value="0.2115" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_home_white.xml" value="0.231" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_more_horizontal.xml" value="0.1945" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_more_vert_white.xml" value="0.1945" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_notifications_white.xml" value="0.2115" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_splash_screen_logo.xml" value="0.17314814814814813" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_subscriptions_white_48dp.xml" value="0.2" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_trending.xml" value="0.231" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_video_app_logo.xml" value="0.2" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/ic_video_app_logo_tiny.xml" value="0.2115" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/image_view_rounded_shape.xml" value="0.2115" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/drawable/splash_image.xml" value="0.2" />
-        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/activity_navigation.xml" value="0.2235494880546075" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/activity_navigation.xml" value="0.5" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/activity_sign_in_or_sign_up.xml" value="0.25" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/activity_sign_in_with.xml" value="0.33" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/activity_sign_in_with_an_email.xml" value="0.25" />
@@ -37,16 +41,16 @@
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_general_settings.xml" value="0.1" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_home_subscribed_channel.xml" value="0.19322916666666667" />
-        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_library.xml" value="0.4279475982532751" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_library.xml" value="0.25" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_subscription.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_subscriptions.xml" value="0.25" />
-        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_trending_topics.xml" value="0.19322916666666667" />
-        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_upload.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_trending_topics.xml" value="0.25" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_upload.xml" value="0.33" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_user_account.xml" value="0.19322916666666667" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_video.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/layout/fragment_videos_channel.xml" value="0.19322916666666667" />
-        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19322916666666667" />
-        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/menu/toolbar_menu.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.33" />
+        <entry key="..\:/Users/felip/AndroidStudioProjects/VideoApp/app/src/main/res/menu/toolbar_menu.xml" value="0.25" />
       </map>
     </option>
   </component>

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.fragments.SubscriptionsFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraint_layout"
+    <RelativeLayout
+        android:id="@+id/parent_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -16,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_editor_absoluteY="150dp">
+            android:layout_marginTop="150dp">
 
             <ImageView
                 android:id="@+id/channel_logo_subscriptions"
@@ -31,8 +30,8 @@
             android:id="@+id/all_linear_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_editor_absoluteX="330dp"
-            app:layout_editor_absoluteY="165dp">
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="165dp">
 
             <TextView
                 android:id="@+id/all_text"
@@ -50,7 +49,7 @@
             android:id="@+id/videos_relative_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_editor_absoluteY="250dp">
+            android:layout_marginTop="250dp">
 
             <VideoView
                 android:id="@+id/video"
@@ -96,7 +95,7 @@
 
         </RelativeLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 
 
 </androidx.core.widget.NestedScrollView>

@@ -1,53 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_menu"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/menu_dark_orange_color"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:logo="@drawable/ic_video_app_logo_tiny"
-        app:menu="@menu/toolbar_menu"
-        app:title="@string/app_name"
-        app:titleMarginStart="@dimen/title_margin_start_23" />
+        android:layout_height="56dp"
+        android:background="@color/menu_dark_orange_color">
 
+        <RelativeLayout
+            android:id="@+id/bar_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/background_transparent">
+
+            <ImageView
+                android:id="@+id/app_logo_tiny"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/background_transparent"
+                android:src="@drawable/ic_video_app_logo_tiny" />
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/background_transparent"
+                android:text="@string/app_name"
+                android:textColor="@color/text_white_color"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/notifications"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="271dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/background_transparent"
+                android:src="@drawable/ic_notifications_white" />
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="321dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/background_transparent"
+                android:src="@drawable/ic_search_white" />
+
+            <ImageView
+                android:id="@+id/account"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="371dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/background_transparent"
+                android:src="@drawable/ic_account_circle_inside_white" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:background="@color/menu_dark_orange_color"
-        app:itemIconTint="@color/icon_tint_white_color"
-        app:itemIconSize="@dimen/item_icon_size"
-        app:labelVisibilityMode="labeled"
-        app:itemTextColor="@color/text_white_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="675dp"
+        android:background="@color/menu_dark_orange_color">
+
+        <RelativeLayout
+            android:id="@+id/bottom_navigation_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/menu_dark_orange_color">
+
+            <ImageView
+                android:id="@+id/home"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/background_transparent"
+                android:src="@drawable/ic_home_white" />
+
+            <TextView
+                android:id="@+id/home_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/background_transparent"
+                android:text="@string/title_home"
+                android:textColor="@color/text_white_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/trending"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/background_transparent"
+                android:src="@drawable/ic_trending" />
+
+            <TextView
+                android:id="@+id/trending_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="97dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/background_transparent"
+                android:text="@string/title_trending"
+                android:textColor="@color/text_white_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/upload"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/background_transparent"
+                android:src="@drawable/ic_add_video_white" />
+
+            <TextView
+                android:id="@+id/upload_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="183dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/background_transparent"
+                android:text="@string/title_upload"
+                android:textColor="@color/text_white_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/subscriptions"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="270dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/background_transparent"
+                android:src="@drawable/ic_subscriptions_white" />
+
+            <TextView
+                android:id="@+id/subscriptions_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="243dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/background_transparent"
+                android:text="@string/title_subscriptions"
+                android:textColor="@color/text_white_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/library"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="350dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/background_transparent"
+                android:src="@drawable/ic_library_white" />
+
+            <TextView
+                android:id="@+id/library_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="343dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/background_transparent"
+                android:text="@string/title_library"
+                android:textColor="@color/text_white_color"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment_activity_navigation"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         app:defaultNavHost="true"
-        android:layout_marginTop="55dp"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_menu"
         app:navGraph="@navigation/mobile_navigation" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
