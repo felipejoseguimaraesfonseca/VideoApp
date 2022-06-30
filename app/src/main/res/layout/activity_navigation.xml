@@ -104,7 +104,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/trending"
+                android:id="@+id/trendig"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="110dp"
@@ -191,13 +191,10 @@
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_fragment_activity_navigation"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/mobile_navigation" />
+        android:layout_height="0dp"
+        android:layout_marginTop="56dp" />
 
 </RelativeLayout>

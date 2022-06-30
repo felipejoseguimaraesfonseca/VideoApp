@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.videoapp">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -23,7 +22,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         tools:targetApi="s">
         <activity
-            android:name=".view.activities.SplashActivity"
+            android:name="com.example.videoapp.view.activities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,28 +30,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.activities.NavigationActivity"
+            android:name="com.example.videoapp.view.activities.NavigationActivity"
             android:exported="false" />
         <activity
-            android:name=".view.activities.SignInWithActivity"
+            android:name="com.example.videoapp.view.activities.SignInWithActivity"
             android:exported="false" />
-
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"/>
-
-        <activity android:name="com.facebook.FacebookActivity"
-            android:configChanges=
-                "keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
-        <activity
-            android:name="com.facebook.CustomTabActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="@string/fb_login_protocol_scheme" />
-            </intent-filter>
-        </activity>
 
     </application>
 

@@ -8,6 +8,8 @@ import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.videoapp.R
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
@@ -22,8 +24,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun splashTransaction() {
-
-        auth = FirebaseAuth.getInstance()
+        auth = Firebase.auth
         val user = auth.currentUser
 
         Handler(Looper.getMainLooper()).postDelayed({

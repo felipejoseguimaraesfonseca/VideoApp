@@ -3,12 +3,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/home_fragment">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/home_fragment"
         android:name="com.example.videoapp.view.fragments.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/trending_topics_fragment"
+        android:name="com.example.videoapp.view.fragments.TrendingTopicsFragment"
+        android:label="fragment_trending_topics"
+        tools:layout="@layout/fragment_trending_topics" />
+    <fragment
+        android:id="@+id/upload_fragment"
+        android:name="com.example.videoapp.view.fragments.UploadFragment"
+        android:label="fragment_upload"
+        tools:layout="@layout/fragment_upload" />
+    <fragment
+        android:id="@+id/subscriptions_fragment"
+        android:name="com.example.videoapp.view.fragments.SubscriptionsFragment"
+        android:label="fragment_subscriptions"
+        tools:layout="@layout/fragment_subscriptions" />
+    <fragment
+        android:id="@+id/library_fragment"
+        android:name="com.example.videoapp.view.fragments.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" />
 
 </navigation>

@@ -2,35 +2,46 @@ package com.example.videoapp.view.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.fragment.app.Fragment
 import com.example.videoapp.R
 import com.example.videoapp.databinding.ActivityNavigationBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.videoapp.view.fragments.*
 
 class NavigationActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNavigationBinding
 
+    private val homeFragment = HomeFragment()
+    private val trendingTopicsFragment = TrendingTopicsFragment()
+    private val uploadFragment = UploadFragment()
+    private val subscriptionsFragment = SubscriptionsFragment()
+    private val libraryFragment = LibraryFragment()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityNavigationBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        val view = binding.root
+        setContentView(view)
+        replaceFragment(homeFragment)
 
-        val navView: BottomNavigationView = binding.bottomNavigation
-
-        val navController = findNavController(R.id.nav_host_fragment_activity_navigation)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+            when(it.itemId) {
+                R.id.home -> replaceFragment(homeFragment)
+                R.id.trendig -> replaceFragment(trendingTopicsFragment)
+                R.id.upload -> replaceFragment(uploadFragment)
+                R.id.subscriptions -> replaceFragment(subscriptionsFragment)
+                R.id.library -> replaceFragment(libraryFragment)
+            }
+            true
+        }
     }
+
+    private fun replaceFragment(fragment: Fragment) {
+        if (fragment != null) {
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_container, fragment)
+            transaction.commit()
+        }
+    }
+
 }
