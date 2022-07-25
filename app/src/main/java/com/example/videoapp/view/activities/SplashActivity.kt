@@ -20,11 +20,12 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        auth = Firebase.auth
+
         splashTransaction()
     }
 
     private fun splashTransaction() {
-        auth = Firebase.auth
         val user = auth.currentUser
 
         Handler(Looper.getMainLooper()).postDelayed({
